@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cor-fonte-principal: #271a45;
+  --cor-background: #d9cdf7;
+}
+
+body {
+  background-color: var(--cor-background);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  width: 100%;
+  align-content: center;
+  gap: 200px;
+}
+
+.mudar {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.imagem1 {
+  width: 400px;
+}
+
+.imagem2 {
+  max-width: 30px;
+}
+
+.imagem2:hover {
+  cursor: pointer;
+}
+
+#descricao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+#descricao p {
+  color: var(--cor-fonte-principal);
+  font-family: "lato", sans-serif;
+  font-size: 10px;
+  font-weight: 100;
+}
+
+#descricao h1 {
+  color: var(--cor-fonte-principal);
+  font-family: "Crimson+Pro";
+  font-size: 32px;
+  font-weight: 600;
+}
+
+h2 {
+  color: var(--cor-fonte-principal);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "lato";
+}
+
+#descricao button {
+  background-color: var(--cor-background);
+  padding: 10px 20px;
+  color: var(--cor-fonte-principal);
+  border: 1px solid var(--cor-fonte-principal);
+  font-family: 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+#descricao button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  main {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 750px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: none;
+  }
+
+  .mudar {
+    display: flex;
+    align-items: center;
+  }
+
+  #descricao {
+    padding: 50px;
+  }
+}
